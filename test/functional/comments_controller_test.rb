@@ -8,11 +8,11 @@ class CommentsControllerTest < ActionController::TestCase
         post :create, :comment => { :body => "Blah", :todo_item_id => @todo_item.id }
       end
 
-      should "increase the comment count" do
+      should "have one comment" do
         assert_equal 1, Comment.count
       end
 
-      should "hav an associated todo item" do
+      should "have an associated todo item" do
         assert_equal assigns(:comment).todo_item, @todo_item
       end
 

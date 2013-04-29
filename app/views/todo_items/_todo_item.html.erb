@@ -1,0 +1,9 @@
+<div class="todo-item <%= todo_item.completed? : 'completed' : ''%>">
+  <div>
+  Comment Body: <% @todo_item.name %>  
+  </div>
+
+  <div>
+  Completed? <% @todo_item.completed %>  
+  </div>
+</div>
