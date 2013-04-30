@@ -2,5 +2,5 @@ Bucketlist::Application.routes.draw do
   resources :comments
   resources :todo_items
   
-  # root :to => 'welcome#index'
+  root :to => 'todo_items#index'
 end

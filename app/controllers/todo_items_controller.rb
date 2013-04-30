@@ -1,6 +1,7 @@
 class TodoItemsController < ApplicationController
   def index
     @todo_items = TodoItem.all
+    # render @todo_items
 
   end
 

@@ -3,7 +3,6 @@
 
 
   <%= render :partial => 'comments/form', :locals => { :item => todo_item } %>
-
   <div class="info">
     <%= distance_of_time_in_words(Time.now, todo_item.created_at) %> ago
   </div>
