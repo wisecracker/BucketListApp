@@ -48,6 +48,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.7.0)
+    geocoder (1.1.8)
     hike (1.2.2)
     i18n (0.6.1)
     journey (1.0.4)
@@ -155,6 +156,7 @@ PLATFORMS
 DEPENDENCIES
   capybara (= 1.1.2)
   database_cleaner
+  geocoder
   jquery-rails
   pry-rails
   rails (= 3.2.13)

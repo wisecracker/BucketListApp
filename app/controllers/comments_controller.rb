@@ -18,6 +18,20 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
     @comment.save!
-    render @comment
+    # render @comment
+
+    respond_to do |format|
+      format.html do
+        render @comment
+      end
+
+      format.js do
+        render :partial => 'comments/create', :locals => { :comment => @comment }, :content_type => 'text/javascript'
+      end
+
+      format.json do
+        render :json => @comment
+      end
+    end
   end
 end
