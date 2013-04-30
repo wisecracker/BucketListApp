@@ -1,2 +1,4 @@
 <h1>Index page for TodoItems</h1>
-<%= @todo_item %>
+<% @todo_items.each do |todo_item| %>
+  <%= render todo_item %>
+<% end %>

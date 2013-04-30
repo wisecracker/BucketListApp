@@ -24,7 +24,7 @@ class TodoItemsControllerTest < ActionController::TestCase
 
     context "GET to show" do
       setup do
-        get :index, :id => 1
+        get :show, :id => 1
       end
 
       should "give me a HTTP 200" do
@@ -32,7 +32,7 @@ class TodoItemsControllerTest < ActionController::TestCase
       end
 
       should "give me 1 Todo item" do
-        assert_equal TodoItem.find(1), assigns(:todo_items).first
+        assert_equal TodoItem.find(1), assigns(:todo_item)
       end
     end
   end

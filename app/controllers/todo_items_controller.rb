@@ -4,6 +4,13 @@ class TodoItemsController < ApplicationController
 
   end
 
+  def destroy
+    @todo_item = TodoItem.find(params[:id])
+    @todo_item.destroy
+    render @todo_item
+
+  end
+
   def show
     @todo_item = TodoItem.find(params[:id])
   end
@@ -18,5 +25,6 @@ class TodoItemsController < ApplicationController
     @todo_item.save!
     # redirect_to @todo_item
     render @todo_item
+    # binding.pry
   end
 end
