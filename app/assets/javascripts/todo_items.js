@@ -17,10 +17,10 @@ $(document).ready(function () {
 // }
 // });
   $("div#button").click(function() {
-    if ($("div.todo-item").is(":hidden")) {
-      $("div.todo-item").slideDown("slow");
+    if ($("div.new-comment").is(":hidden")) {
+      $("div.new-comment").slideDown("slow");
     } else {
-      $("div.todo-item").hide();
+      $("div.new-comment").hide();
     }
   });
 });
