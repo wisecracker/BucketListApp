@@ -27,8 +27,9 @@ $(document).ready(function () {
 
   $("button.display-map").click(function() {
     console.log("Display-map button pressed!");
-    latitude = item.latitude;
-    longitude = item.longitude;
+    idNumber = this.id;
+    latitude = gon.todo_items[idNumber].latitude;
+    longitude = gon.todo_items[idNumber].longitude;
     goToLocation(latitude, longitude);
   });
 

@@ -2,7 +2,8 @@
   <div class="info">
     <p>
       <!-- NOTE: button-ID attribute is used to generate the correct MAP using Gon. -->
-      <button type="button" class="display-map" id="<%= todo_item.id %>">View on Map</button>
+      <!-- 1 LESS the id number in order to get the correct ARRAY object at gon.todo_items -->
+      <button type="button" class="display-map" id="<%= todo_item.id - 1 %>">View on Map</button>
       <h3>Todo Item: <%= todo_item.name %></h3>
     </p>
 
