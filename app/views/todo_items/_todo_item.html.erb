@@ -2,7 +2,6 @@
   <div class="info">
     <p>
       <h3>Todo Item: <%= todo_item.name %></h3>
-
     </p>
     <p>Completed?: <%= todo_item.completed? ? "Completed!" : "Still on bucket list" %></p>
     <p>Posted: <%= distance_of_time_in_words(Time.now, todo_item.created_at) %> ago</p>
