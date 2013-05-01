@@ -11,3 +11,11 @@
  *= require_self
  *= require_tree .
  */
+
+#map-canvas {
+  position: absolute;
+  right: 0;
+}
+ .container {
+  background: yellow;
+ }

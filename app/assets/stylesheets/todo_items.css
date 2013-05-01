@@ -1,6 +1,6 @@
-div {
-  float: left;
-}
+
+
+
 
 .todo-item {
   border: 4px solid blue;
@@ -9,7 +9,7 @@ div {
   position: relative;
   /*display: inline;*/
   /*float: left;*/
-  /*clear:both;*/
+  clear:both;
 }
 
 .new-comment {
@@ -22,4 +22,5 @@ div {
 .button {
   border: 1px solid red;
   clear: both;
+  width: 250px;
 }
