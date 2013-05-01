@@ -13,3 +13,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$('input.delete').click (function(){
+  if(confirm("Are you sure?")){
+      // var row = $(this).closest("tr").get(0);
+      // $.post(this.href, {_method:'delete'}, null, "script");
+      // $(row).hide();
+      console.log("CLICKED");
+      return false;
+  } else {
+      //they clicked no.
+      return false;
+  }
+});
+
+

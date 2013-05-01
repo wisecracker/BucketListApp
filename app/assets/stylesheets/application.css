@@ -28,3 +28,7 @@ body {
   margin: 0 auto;
   width: 1600px;
  }
+
+.delete {
+  float: right;
+}

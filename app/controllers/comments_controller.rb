@@ -4,6 +4,14 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    render @comment
+    # render :nothing => true
+    # respond_to do |format|
+    #     format.html { render @comment }
+    #     format.js { render :nothing => true }
+    # end
   end
 
   def show

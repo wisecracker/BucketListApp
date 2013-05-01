@@ -2,13 +2,20 @@
   <div class="info">
     <p>
       <h3>Todo Item: <%= todo_item.name %></h3>
+
     </p>
-    <p>Completed?: <%= todo_item.completed? ? "Completed!" : "Still on bucket list" %></p>
-    <p>Posted: <%= distance_of_time_in_words(Time.now, todo_item.created_at) %> ago</p>
-    <p class="comments">
+    <p><b>Completed?</b>: <%= todo_item.completed? ? "Completed!" : "Still on bucket list" %></p>
+    <p><b>Posted:</b> <%= distance_of_time_in_words(Time.now, todo_item.created_at) %> ago</p>
+    <p>
       <% if todo_item.comments.first%>
         <% todo_item.comments.each do |comment|%>
-          <span>CommentID</span><%= comment.id %>: <%= comment.body %><br>
+          <p class="comments"> 
+            <span>CommentID</span><%= comment.id %>: <%= comment.body %>
+            <%= button_to "delete", comment, :method=>:delete, :class=>:delete %>
+          </p>
+
+          <br>
+
         <% end %>
       <% else %>
         No comments yet.
@@ -18,4 +25,6 @@
   <div class="button button-item<%= todo_item.id %>">CLICK HERE for Comments Dropdown</div>
   <%= render :partial => 'comments/form', :locals => { :item => todo_item } %>
 </div> 
+
+
 
