@@ -6,7 +6,15 @@
     </p>
     <p>Completed?: <%= todo_item.completed? ? "Completed!" : "Still on bucket list" %></p>
     <p>Posted: <%= distance_of_time_in_words(Time.now, todo_item.created_at) %> ago</p>
-    <p>Comment: <span>"<%= todo_item.comments.first.body if todo_item.comments.first%>"</span></p>
+    <p class="comments">
+      <% if todo_item.comments.first%>
+        <% todo_item.comments.each do |comment|%>
+          <span>CommentID</span><%= comment.id %>: <%= comment.body %><br>
+        <% end %>
+      <% else %>
+        No comments yet.
+      <% end %>
+    </p>
   </div>
   <div class="button button-item<%= todo_item.id %>">CLICK HERE for Comments Dropdown</div>
   <%= render :partial => 'comments/form', :locals => { :item => todo_item } %>
