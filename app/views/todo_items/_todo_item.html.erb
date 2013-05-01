@@ -11,7 +11,7 @@
     <p>Latitude: <%= todo_item.latitude if todo_item.latitude %></p>
     <p>Longitude: <%= todo_item.longitude if todo_item.longitude %></p>
     <p>Destination ID: <%= todo_item.destination_id %></p>
-    <p>Destination Name: <%= todo_item.destinations.name %></p>
+    <p>Destination Name: <%= todo_item.destination.name if todo_item.destination %></p>
 
     <p><b>Completed?</b>: <%= todo_item.completed? ? "Completed!" : "Still on bucket list" %></p>
     <p><b>Posted:</b> <%= distance_of_time_in_words(Time.now, todo_item.created_at) %> ago</p>
