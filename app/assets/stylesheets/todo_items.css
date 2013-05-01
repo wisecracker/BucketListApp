@@ -1,5 +1,9 @@
 
-
+.todo-list {
+  border: 3px solid green;
+  width: 600px;
+  height: auto;
+}
 
 
 .todo-item {
@@ -10,6 +14,8 @@
   /*display: inline;*/
   /*float: left;*/
   clear:both;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .new-comment {
@@ -23,4 +29,8 @@
   border: 1px solid red;
   clear: both;
   width: 250px;
+}
+
+p span {
+  font-style: italic;
 }

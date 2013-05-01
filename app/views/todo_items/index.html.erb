@@ -1,7 +1,9 @@
-<h1>TodoItems Index</h1>
-<div class="button">CLICK for dropdown box</div> <br>
-
-<% @todo_items.each do |item| %>
-  <%= render item %>
-<% end %>
+<h1>Bucket List</h1> 
+<div class="todo-list">
+  <div class="button">CLICK for dropdown box</div> <br>
+  <% @todo_items %>
+  <% @todo_items.each do |item| %>
+    <%= render item %>
+  <% end %>
+</div>
 

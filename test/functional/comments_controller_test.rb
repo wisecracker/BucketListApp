@@ -20,8 +20,9 @@ class CommentsControllerTest < ActionController::TestCase
         assert_response :success
       end
     end
+  end
 
-    context "The Comments Controller" do
+    context "The Comments Controller: " do
       context "A normal HTTP Post to the HTML method" do
         setup do
           post :create, :comment => { :body => "blah"}
@@ -43,12 +44,9 @@ class CommentsControllerTest < ActionController::TestCase
           assert_equal response.content_type, "text//javascript"
         end
 
-        should "" do
+        # should "" do
           
-        end
+        # end
       end
     end
-  end
-
-
 end
