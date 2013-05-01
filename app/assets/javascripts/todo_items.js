@@ -16,7 +16,7 @@ $(document).ready(function () {
 // $("div").hide();
 // }
 // });
-  $("div#button").click(function() {
+  $("div.button").click(function() {
     if ($("div.new-comment").is(":hidden")) {
       $("div.new-comment").slideDown("slow");
     } else {

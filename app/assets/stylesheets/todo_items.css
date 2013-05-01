@@ -4,8 +4,9 @@ div {
 
 .todo-item {
   border: 4px solid blue;
-  height: 200px;
+  height: auto;
   width: 400px;
+  position: relative;
   /*display: inline;*/
   /*float: left;*/
   /*clear:both;*/
@@ -16,5 +17,9 @@ div {
 }
 
 .info {
+}
 
+.button {
+  border: 1px solid red;
+  clear: both;
 }
