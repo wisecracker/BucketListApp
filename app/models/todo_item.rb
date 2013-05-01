@@ -7,6 +7,7 @@ class TodoItem < ActiveRecord::Base
   # after_validation :geocode
 
   has_many :comments
+  belongs_to :destination
 
   def geocode_method
     "#{self.location} #{destination.name}"
