@@ -1,8 +1,8 @@
 <div class="todo-item <%= todo_item.completed? ? 'completed' : '' %>">
   <div class="info">
     <p>
+      <button type="button" class="display-map">View on Map</button>
       <h3>Todo Item: <%= todo_item.name %></h3>
-
     </p>
     <p><b>Completed?</b>: <%= todo_item.completed? ? "Completed!" : "Still on bucket list" %></p>
     <p><b>Posted:</b> <%= distance_of_time_in_words(Time.now, todo_item.created_at) %> ago</p>

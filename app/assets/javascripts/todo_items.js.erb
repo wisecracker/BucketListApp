@@ -23,6 +23,15 @@ $(document).ready(function () {
       $(this).next("div.new-comment").hide();
     }
   });
+
+
+  $("button.display-map").click(function() {
+    console.log("Display-map button pressed!");
+    latitude = 38.8977;
+    longitude = -77.0366;
+    goToLocation(latitude, longitude);
+  });
+
 });
 
 
